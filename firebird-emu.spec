@@ -25,6 +25,10 @@ Requires:       hicolor-icon-theme
 # There is no version, so just use YYYYMMDD.revision.
 Provides:       bundled(gif-h) = 20180321.%{commit1}
 
+# Exclude some architectures.
+# https://github.com/nspire-emus/firebird/issues/127
+ExcludeArch:    ppc64 i686
+
 %description
 This project is the community, third-party TI Nspire emulator,
 Texas Instruments' ARM-based series of graphing calculators.
