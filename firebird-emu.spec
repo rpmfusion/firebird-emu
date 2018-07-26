@@ -3,7 +3,7 @@
 
 Name:           firebird-emu
 Version:        1.4
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Third-party emulator for ARM-based TI calculators
 
 License:        GPLv3 and Public Domain
@@ -66,6 +66,9 @@ desktop-file-validate %{buildroot}/%{_datadir}/applications/org.firebird.firebir
 %{_datadir}/icons/hicolor/*/apps/firebird.png
 
 %changelog
+* Thu Jul 26 2018 RPM Fusion Release Engineering <leigh123linux@gmail.com> - 1.4-2
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_29_Mass_Rebuild
+
 * Wed Mar 21 2018 Ben Rosser <rosser.bjr@gmail.com> - 1.4-1
 - Update to latest release.
 
