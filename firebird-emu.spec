@@ -13,6 +13,7 @@ Source0:        https://github.com/nspire-emus/firebird/archive/v%{version}/fire
 # Bundled gif-h as submodule.
 Source1:        https://github.com/jacobly0/gif-h/archive/%{commit1}.tar.gz#/gif-h-%{shortcommit1}.tar.gz
 
+BuildRequires:  gcc, gcc-c++
 BuildRequires:  qt5-qtbase-devel
 BuildRequires:  qt5-qtquickcontrols2-devel
 BuildRequires:  zlib-devel
