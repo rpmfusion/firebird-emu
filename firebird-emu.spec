@@ -2,8 +2,8 @@
 %global shortcommit1 %(c=%{commit1}; echo ${c:0:7})
 
 Name:           firebird-emu
-Version:        1.4
-Release:        5%{?dist}
+Version:        1.5
+Release:        1%{?dist}
 Summary:        Third-party emulator for ARM-based TI calculators
 
 License:        GPLv3 and Public Domain
@@ -41,7 +41,7 @@ Android, iOS, Linux, Mac and Windows.
 %autosetup -n firebird-%{version}
 
 # Fix up desktop file.
-sed 's/DesktopUtility/X-DesktopUtility/g' -i resources/org.firebird.firebird-emu.desktop
+sed 's/DesktopUtility/X-DesktopUtility/g' -i resources/org.firebird-emus.firebird-emu.desktop
 
 # Install gif-h submodule from source1 tarball.
 cd core/
@@ -57,17 +57,20 @@ mv gif-h-%{commit1} gif-h
 %make_install INSTALL_ROOT=%{buildroot}
 
 # Validate desktop file.
-desktop-file-validate %{buildroot}/%{_datadir}/applications/org.firebird.firebird-emu.desktop
+desktop-file-validate %{buildroot}/%{_datadir}/applications/org.firebird-emus.firebird-emu.desktop
 
 %files
 %license LICENSE
 %doc README.md TODO.md
 %{_bindir}/firebird-emu
 %{_bindir}/firebird-send
-%{_datadir}/applications/org.firebird.firebird-emu.desktop
-%{_datadir}/icons/hicolor/*/apps/firebird.png
+%{_datadir}/applications/org.firebird-emus.firebird-emu.desktop
+%{_datadir}/icons/hicolor/*/apps/org.firebird-emus.firebird-emu.png
 
 %changelog
+* Tue Apr 21 2020 Ben Rosser <rosser.bjr@gmail.com> - 1.5-1
+- Updated to latest upstream release.
+
 * Tue Feb 04 2020 RPM Fusion Release Engineering <leigh123linux@gmail.com> - 1.4-5
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_32_Mass_Rebuild
 
