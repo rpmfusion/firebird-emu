@@ -28,8 +28,9 @@ Provides:       bundled(gif-h) = 20180321.%{commit1}
 
 # Exclude some architectures.
 # https://github.com/nspire-emus/firebird/issues/127
-# aarch64 fails on rawhide :( https://github.com/nspire-emus/firebird/issues/136
-ExcludeArch:    ppc64 i686 aarch64
+# ppc64le fails on Rawhide now, but aarch64 is fixed:
+# https://github.com/nspire-emus/firebird/issues/196
+ExcludeArch:    ppc64 i686 ppc64le
 
 %description
 This project is the community, third-party TI Nspire emulator,
