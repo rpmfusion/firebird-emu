@@ -2,13 +2,13 @@
 %global shortcommit1 %(c=%{commit1}; echo ${c:0:7})
 
 Name:           firebird-emu
-Version:        1.5
-Release:        6%{?dist}
+Version:        1.6
+Release:        1%{?dist}
 Summary:        Third-party emulator for ARM-based TI calculators
 
 License:        GPLv3 and Public Domain
 URL:            https://github.com/nspire-emus/firebird
-Source0:        https://github.com/nspire-emus/firebird/archive/v%{version}/firebird-%{version}.tar.gz
+Source0:        %url/archive/v%{version}/firebird-%{version}.tar.gz
 
 # Bundled gif-h as submodule.
 Source1:        https://github.com/jacobly0/gif-h/archive/%{commit1}.tar.gz#/gif-h-%{shortcommit1}.tar.gz
@@ -69,6 +69,9 @@ desktop-file-validate %{buildroot}/%{_datadir}/applications/org.firebird-emus.fi
 %{_datadir}/icons/hicolor/*/apps/org.firebird-emus.firebird-emu.png
 
 %changelog
+* Sat Apr 01 2023 Leigh Scott <leigh123linux@gmail.com> - 1.6-1
+- Updated to latest upstream release.
+
 * Sun Aug 07 2022 RPM Fusion Release Engineering <sergiomb@rpmfusion.org> - 1.5-6
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_37_Mass_Rebuild and ffmpeg
   5.1
