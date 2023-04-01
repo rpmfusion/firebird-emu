@@ -51,7 +51,7 @@ tar xfz %SOURCE1
 mv gif-h-%{commit1} gif-h
 
 %build
-%qmake_qt5
+%qmake_qt5  PREFIX=%{_prefix}
 %make_build
 
 %install
