@@ -3,7 +3,7 @@
 
 Name:           firebird-emu
 Version:        1.6
-Release:        6%{?dist}
+Release:        7%{?dist}
 Summary:        Third-party emulator for ARM-based TI calculators
 
 License:        GPLv3 and Public Domain
@@ -69,6 +69,9 @@ desktop-file-validate %{buildroot}/%{_datadir}/applications/org.firebird-emus.fi
 %{_datadir}/icons/hicolor/*/apps/org.firebird-emus.firebird-emu.png
 
 %changelog
+* Mon Feb 02 2026 RPM Fusion Release Engineering <sergiomb@rpmfusion.org> - 1.6-7
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_44_Mass_Rebuild
+
 * Sun Jul 27 2025 RPM Fusion Release Engineering <sergiomb@rpmfusion.org> - 1.6-6
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_43_Mass_Rebuild
 
